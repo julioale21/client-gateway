@@ -9,12 +9,12 @@ import {
   Query,
   Patch,
 } from '@nestjs/common';
-import { CreateOrderDto } from './dto/create-order.dto';
+
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { ORDERS_SERVICE } from 'src/config';
 import { catchError, firstValueFrom } from 'rxjs';
 import { OrdersPaginationDto } from './dto/orders-pagination.dto';
-import { StatusDto } from './dto';
+import { CreateOrderDto, StatusDto } from './dto';
 
 @Controller('orders')
 export class OrdersController {
